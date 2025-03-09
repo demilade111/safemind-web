@@ -1,0 +1,11 @@
+const express = require("express");
+const eventController = require("../controllers/event.controller");
+const authMiddleware = require("../middleware/auth.middleware");
+const router = express.Router();
+router.use(authMiddleware);
+router.get("/", eventController.getEvents);
+router.get("/upcoming", eventController.getUpcomingEvents);
+router.get("/:id", eventController.getEventById);
+router.post("/:id/rsvp", eventController.rsvpToEvent);
+router.delete("/:id/rsvp", eventController.cancelRsvp);
+module.exports = router;
