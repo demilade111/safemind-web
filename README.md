@@ -62,7 +62,7 @@ The easiest way to run the entire platform is using Docker Compose:
 2. Create a `.env` file in the `backend` directory (copy from `.env.example`):
 
    ```
-   DATABASE_URL="postgresql://postgres:postgres@postgres:5432/safemind_db?schema=public"
+   DATABASE_URL=""
    JWT_SECRET="your_secure_jwt_secret_key_here"
    PORT=5000
    CORS_ORIGIN="http://localhost:5173"
